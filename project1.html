@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>This page is NaN :D</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <div class="grid-container">
+        <div class="navigationBar sticky">
+            <nav>
+                <ul class="navigation">
+                    <li class="navLi"><a href="index.html">Rapport</a></li>
+                    <li class="navLi"><a class="active" href="project1.html">Project 1<span class="loading"></span></a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="bodyLeft item">
+            <p>
+                <h2>Hantera dina stringar ;)</h2>
+                <form name="loanDetails">
+                    <input type="text" placeholder="Förnamn" name="firstName">
+                    <input type="text" placeholder="Efternamn" name="lastName"><br>
+                    <input type="button" value="Se ditt namn ändra ordning :O" onclick="stringHandler()">
+                </form>
+                <span id="namnen"></span>
+            </p>
+            <hr>
+            <p>
+                <h2>Konvertera ett tal</h2>
+                <form name="numberSystem">
+                    <input type="text" placeholder="13.37" name="inputNumber"><br>
+                    <input type="button" value="Kalkylera värden" onclick="numberConverter()">
+                </form>
+                Roten: <span id="roten"></span><br>Kvadraten: <span id="kvadraten"></span><br>Inversa: <span id="inversa"></span><br>
+                Heltal: <span id="integer"></span><br>Binärt: <span id="binart"></span><br>Oktal: <span id="oktal"></span><br>Hexadec:
+                <span id="hexadec"></span>
+            </p>
+            <hr>
+            <p>
+                <form name="loanCalculator">
+                    <h2>Är du i trubbel? Vill du ha ett snabbt lån?</h2>
+                    Hur mycket i trubbel?<br> <input type="text" placeholder="9001" name="levelOfDesperation"><br>
+                    Hur mycket extra vill du betala tillbaka?<br> <input type="text" placeholder="Hur många procent?"
+                        name="loanRent"><br>
+                    Ju längre lån, desto mindre märks det i kontot ;)<br> <input type="text" placeholder="Hur många år?"
+                        name="loanDuration"><br>
+                    <input type="button" value="Kalkylera lånet" onclick="loanKalkylerare()">
+                </form><br>
+                <span id="payDisMuch"></span>
+            </p>
+            <hr>
+            <p>
+                <h2>Ändra bakgrundfärgen till något fint</h2>
+                <form name="bgChange">
+                    <input type="text" placeholder="255,255,255/#ffffff/#fff" name="rgbValue"><br>
+                    Konverterade värdet: <span id="convertedRgbField"></span><br>
+                    <input type="button" value="Do it!" onclick="changeBg()">
+                </form>
+            </p>
+
+        </div>
+        <div class="bodyRight item">
+            <h2>När vill du betala din första rat för lånet?</h2>
+            <p>
+                <form name="forfalloDag">
+                    <input type="text" placeholder="Hur många dagar?" name="forfalloDagar"><br>
+                    <input type="button" value="Räkna förfallodag" onclick="calculateExpiryDate()"><br>
+                </form>
+                Dagens datum är: <span id="currentDate"></span><br>
+                Du ska betala på datumet: <span id="whenCustomerHasToPay"></span>
+            </p>
+            <hr>
+            <p>
+                <form name="referenceForm">
+                    <h2>Vem var du igen?</h2>
+                    Skriv in din kundnummer så får du en referenskod att betala tillbaka skulden.<br>
+                    <input type="text" placeholder="123456789" name="userIDNum"><br>
+                    <input type="button" value="Få en referens!" onclick="referenceGenerator()">
+                </form>
+                <span id="referenceNumber"></span>
+            </p>
+            <hr>
+            <p>
+                <h2>Din personbeteckning</h2>
+                Vi vill ju se till att du är en riktigt person, så att vi kan skicka dig "gåvor" för att du är så
+                duktig.<br>
+                <form name="socialSecurityForm">
+                    <input type="text" name="ssn">
+                    <input type="button" value="Submit" onclick="ssnChecker()">
+                </form>
+                <span id="correctSSN"></span> <span id="manOrWoman"></span> <span id="restOfStringSSN"></span>
+            </p>
+            <hr>
+            <p>
+                <h2>Vår personal</h2>
+                Vi värderar transparens, klicka på knappen för att få en lista på våra anställda! Och en snygg...
+                sorterad lista av slumpmässiga siffror... <br>
+                <input type="button" value="Look at them names!" onclick="randomStringsAndNums()"><br>
+                <table>
+                    <tr>
+                        <td><span id="firstLastNamesArray"></span></td>
+                        <td><span id="randomNumsArray"></span></td>
+                    </tr>
+                </table>
+            </p>
+
+
+        </div>
+        <div class="footerTransparent footer">
+            <footer>Copyright Johan</footer>
+        </div>
+
+    </div>
+</body>
+<script src="project1.js"></script>
+</html>
