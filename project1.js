@@ -40,7 +40,8 @@ function loanKalkylerare() {
     var loanRent = document.loanCalculator.loanRent.value / 12 / 100;
     var loanLengthMonths = document.loanCalculator.loanDuration.value * 12;
     var loanPayment = loanAmount * ((loanRent * Math.pow((1 + loanRent), loanLengthMonths)) / (Math.pow((1 + loanRent), loanLengthMonths) - 1));
-    document.querySelector("#payDisMuch").innerHTML = loanPayment.toFixed(2) + " €/månad";
+    var loanPaymentTotal = loanPayment * loanLengthMonths;
+    document.querySelector("#payDisMuch").innerHTML = "Du betalar " + loanPayment.toFixed(2) + " €/månad" + "<br> och totalt " + loanPaymentTotal.toFixed(2) + " €";
 }
 
 function changeBg() {

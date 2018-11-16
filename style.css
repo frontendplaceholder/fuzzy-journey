@@ -46,6 +46,12 @@ video {
   grid-row-start:2;
   grid-row-end:11;
 }
+.bodyCenter{
+  grid-row-start: 2;
+  grid-row-end: 11;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
 .bodyRight{
   grid-row-start:2;
   grid-row-end:11;
