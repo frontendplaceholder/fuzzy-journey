@@ -188,8 +188,8 @@ function referenceGenerator() {
 
 function ssnChecker() {
     var initialSSN = document.socialSecurityForm.ssn.value;
-    var controlNumberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I",
-        "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y"]
+    var controlNumberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "H",
+        "J", "K", "L", "M", "N", "P", "R", "S", "T", "U", "V", "X", "Y"]
     var integerSSN = 0;
     var moduloSSN = 0;
     var weirdThreeNumberInt = 0;
@@ -241,7 +241,7 @@ function ssnChecker() {
             break;
     }
     birthdayDay = initialSSN.slice(0, 2);
-    birthDate = new Date(century + initialSSN.slice(4, 6), initialSSN.slice(2, 4) - 1, birthdayDay);
+    birthDate = new Date(century, initialSSN.slice(2, 4) - 1, birthdayDay);
     console.log(birthDate.getDay());
     document.querySelector("#restOfStringSSN").innerHTML = "född år " + century + " på en " + birthDateNames[birthDate.getDay()];
 }
